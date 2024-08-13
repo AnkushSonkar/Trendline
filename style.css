@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 6vh;
+  width: 100%;
+  font-size: 1.5vw;
+  font-weight: 600;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#nav-part1 {
+  display: flex;
+}
+
+.gola {
+  background-color: black;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+#nav-part2 {
+  display: flex;
+  gap: 20px;
+}
+
+#nav-part2 > h4 > span {
+  margin: 0 10px;
+  color: gray;
+}
+
+#nav2 {
+  height: 6vh;
+  width: 100%;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  overflow: hidden;
+}
+
+#nav2 > h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#nav-part2 > h5 {
+  display: none;
+}
+
+#content {
+  height: calc(100vh - 12vh);
+  position: relative;
+}
+
+#text-content {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  overflow: auto;
+}
+
+#text-content::-webkit-scrollbar {
+  background-color: transparent;
+  height: 3.5px;
+}
+
+#text-content::-webkit-scrollbar-thumb {
+  background-color: orangered;
+}
+
+.elem {
+  flex-shrink: 0;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elem > h1 {
+  font-weight: 100;
+  font-size: 55px;
+  text-transform: capitalize;
+}
+
+#image-content {
+  background-color: aqua;
+  height: calc(70% - 3.5px);
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+
+#image-content img {
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#image-content::-webkit-scrollbar {
+  display: none;
+}
+
+#note {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px) {
+  #nav {
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding: 1vw 3vw;
+  }
+
+  .gola {
+    height: 15px;
+    width: 15px;
+  }
+
+  #nav-part2 h4 {
+    display: none;
+  }
+  #nav-part2 h4:nth-child(1) {
+    display: initial;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  #nav-part2 > h5 {
+    display: initial;
+    font-size: 30px;
+  }
+
+  #nav2 {
+    gap: 3vw;
+  }
+
+  #nav2 > h3 {
+    font-weight: 600;
+    font-size: 3.6vw;
+  }
+
+  .elem > h1 {
+    font-weight: 100;
+    font-size: 15vw;
+    padding: 2px;
+  }
+  #text-content {
+    gap: 10vw;
+    height: 25%;
+  }
+
+  #text-content::-webkit-scrollbar {
+    height: 4.5px;
+  }
+
+  #image-content {
+    height: calc(75% - 3.5px);
+  }
+}
